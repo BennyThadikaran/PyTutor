@@ -1,0 +1,128 @@
+{
+   "meta": {
+      "referFile": "grocery.data",
+      "review_dt": null
+   },
+   "questions": [
+      {
+         "easiness": null,
+         "interval": null,
+         "repetitions": null,
+         "review_dt": null,
+         "q": "Replace 'apple' with nuts",
+         "a": "sed 's/apple/nuts/g' data/grocery.data"
+      },
+      {
+         "easiness": null,
+         "interval": null,
+         "repetitions": null,
+         "review_dt": null,
+         "q": "Make first character of every line uppercase",
+         "a": "sed 's/^./\\u&/g' data/grocery.data"
+      },
+      {
+         "easiness": null,
+         "interval": null,
+         "repetitions": null,
+         "review_dt": null,
+         "q": "Make first character of every word uppercase",
+         "a": "sed 's/\\b./\\u&/g' data/grocery.data"
+      },
+      {
+         "easiness": null,
+         "interval": null,
+         "repetitions": null,
+         "review_dt": null,
+         "q": "Replace 'tomato' with 'carrot' and 'corn' with 'wheat'",
+         "a": "sed -e 's/tomato/carrot/g' -e 's/corn/wheat/g' data/grocery.data"
+      },
+      {
+         "easiness": null,
+         "interval": null,
+         "repetitions": null,
+         "review_dt": null,
+         "q": "Remove the second occurance of 'almond'",
+         "a": "sed 's/almond//2' data/grocery.data"
+      },
+      {
+         "easiness": null,
+         "interval": null,
+         "repetitions": null,
+         "review_dt": null,
+         "q": "Add a {} to every occurance of 'butter'",
+         "a": "sed 's/butter/{\\0}/' data/grocery.data"
+      },
+      {
+         "easiness": null,
+         "interval": null,
+         "repetitions": null,
+         "review_dt": null,
+         "q": "Replace 'tomato' and 'corn' with 'Canned tomato' and 'Canned Corn'",
+         "a": "sed -E 's/(tomato|corn)/Canned \\1/g' data/grocery.data"
+      },
+      {
+         "easiness": null,
+         "interval": null,
+         "repetitions": null,
+         "review_dt": null,
+         "q": "Replace 'apple' with 'nuts' and only print changes",
+         "a": "sed -n 's/apple/nuts/p' data/grocery.data"
+      },
+      {
+         "easiness": null,
+         "interval": null,
+         "repetitions": null,
+         "review_dt": null,
+         "q": "Print 1st line of file",
+         "a": "sed -n 1p data/grocery.data"
+      },
+      {
+         "easiness": null,
+         "interval": null,
+         "repetitions": null,
+         "review_dt": null,
+         "q": "Print the last line of file",
+         "a": "sed -n '$p' data/grocery.data"
+      },
+      {
+         "easiness": null,
+         "interval": null,
+         "repetitions": null,
+         "review_dt": null,
+         "q": "Print 1st 3 lines of file",
+         "a": "sed 3q data/grocery.data"
+      },
+      {
+         "easiness": null,
+         "interval": null,
+         "repetitions": null,
+         "review_dt": null,
+         "q": "Print all lines from 11 to end",
+         "a": "sed -n '11,$p' data/grocery.data"
+      },
+      {
+         "easiness": null,
+         "interval": null,
+         "repetitions": null,
+         "review_dt": null,
+         "q": "Print items starting with 'r'",
+         "a": "sed -n '/^r/p' data/grocery.data"
+      },
+      {
+         "easiness": null,
+         "interval": null,
+         "repetitions": null,
+         "review_dt": null,
+         "q": "Print items starting with 'm' until an item starting with 't' is found",
+         "a": "sed -n '/^m/,/^t/p' data/grocery.data"
+      },
+      {
+         "easiness": null,
+         "interval": null,
+         "repetitions": null,
+         "review_dt": null,
+         "q": "Print from 1st line until the item 'cherry' is found",
+         "a": "sed -n '1,/cherry/p' data/grocery.data"
+      }
+   ]
+}

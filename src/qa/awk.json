@@ -1,0 +1,120 @@
+{
+   "meta": {
+      "referFile": "emp.data",
+      "review_dt": "2022-10-06"
+   },
+   "questions": [
+      {
+         "easiness": null,
+         "interval": null,
+         "repetitions": null,
+         "review_dt": null,
+         "q": "Print every line",
+         "a": "awk '{ print }' data/emp.data"
+      },
+      {
+         "easiness": null,
+         "interval": null,
+         "repetitions": null,
+         "review_dt": null,
+         "q": "Print the last column",
+         "a": "awk '{ print $NF }' data/emp.data"
+      },
+      {
+         "easiness": null,
+         "interval": null,
+         "repetitions": null,
+         "review_dt": null,
+         "q": "Prefix every line with line numbers",
+         "a": "awk '{ print NR, $0 }' data/emp.data"
+      },
+      {
+         "easiness": null,
+         "interval": null,
+         "repetitions": null,
+         "review_dt": null,
+         "q": "Print Name and Total pay (rate * hours) for employees working more than 0 hours?",
+         "a": "awk '$3 > 0 { print $1, $2 * $3 }' data/emp.data"
+      },
+      {
+         "easiness": null,
+         "interval": null,
+         "repetitions": null,
+         "review_dt": null,
+         "q": "Print lines with pay rate atleast $4 or hours worked atleast 20",
+         "a": "awk '$2 >= 4 || $3 >= 20 { print }' data/emp.data"
+      },
+      {
+         "easiness": null,
+         "interval": null,
+         "repetitions": null,
+         "review_dt": null,
+         "q": "Print no of employees working greater than 15 hours",
+         "a": "awk '$3 > 15 { emp = emp + 1 } END { print emp }' data/emp.data"
+      },
+      {
+         "easiness": null,
+         "interval": null,
+         "repetitions": null,
+         "review_dt": null,
+         "q": "Print the average pay of all employees",
+         "a": "awk '{ pay = pay + $2 * $3 } END { print pay / NR }' data/emp.data"
+      },
+      {
+         "easiness": null,
+         "interval": null,
+         "repetitions": null,
+         "review_dt": null,
+         "q": "Print the employee with the highest hourly rate in the format specified",
+         "a": "awk '$2 > maxrate { maxrate = $2; emp = $1 } END { print \"Highest Rate:\", emp, maxrate }' data/emp.data"
+      },
+      {
+         "easiness": null,
+         "interval": null,
+         "repetitions": null,
+         "review_dt": null,
+         "q": "Print all employee names space separated",
+         "a": "awk '{ names = names $1 \" \" } END { print names }' data/emp.data"
+      },
+      {
+         "easiness": null,
+         "interval": null,
+         "repetitions": null,
+         "review_dt": null,
+         "q": "Print length of all names",
+         "a": "awk '{ print length($1) }' data/emp.data"
+      },
+      {
+         "easiness": null,
+         "interval": null,
+         "repetitions": null,
+         "review_dt": null,
+         "q": "Print average pay of employees with hourly rate greater than 6. Print \"None\" if no employees",
+         "a": "awk '$2 > 6 { n = n + 1; p = p + $2 * $3 } END { if (n > 0) print p/n; else print \"None\"}' data/emp.data"
+      },
+      {
+         "easiness": null,
+         "interval": null,
+         "repetitions": null,
+         "review_dt": null,
+         "q": "Print all lines with heading \"NAME\", \"RATE\", \"HOURS\".\nEach field must be left justified and 10 characters wide.\nWrite the program in run.awk.",
+         "a": "awk -v fmt=\"%-10s %-10s %-10s\n\" 'BEGIN { printf(fmt, \"NAME\", \"RATE\", \"HOURS\"); } { printf(fmt, $1, $2, $3) }' data/emp.data"
+      },
+      {
+         "easiness": null,
+         "interval": null,
+         "repetitions": null,
+         "review_dt": null,
+         "q": "Print 0 to 5 on each line using while loop",
+         "a": "awk 'BEGIN { i = 0; while (i <= 5) { print i; i = i + 1; } }'"
+      },
+      {
+         "easiness": null,
+         "interval": null,
+         "repetitions": null,
+         "review_dt": null,
+         "q": "Print 5 to 0 on each line using for loop",
+         "a": "awk 'BEGIN { for (i = 5; i >= 0; i = i - 1) print i }'"
+      }
+   ]
+}
