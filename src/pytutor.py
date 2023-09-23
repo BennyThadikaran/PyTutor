@@ -105,7 +105,7 @@ moduleList = tuple(f.name[:-5] for f in QA_DIR.iterdir())
 
 parser = ArgumentParser(
     prog='pytutor.py',
-    description='A python tutor to recap usage of linux command line tools.')
+    description='A Python tutor to review usage of Linux command line tools.')
 
 parser.add_argument('-m', '--module',
                     action='store',
