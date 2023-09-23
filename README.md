@@ -128,7 +128,7 @@ The earliest review date for all the questions gets saved to the JSON file under
 ### AWK
 
 - [AWK Guide](https://www.grymoire.com/Unix/Awk.html#uh-0)
-- [Sed Cheatsheet](https://quickref.me/awk)
+- [AWK Cheatsheet](https://quickref.me/awk)
 
 # IMPORTANT NOTE
 
